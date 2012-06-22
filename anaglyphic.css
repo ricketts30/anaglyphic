@@ -2,6 +2,18 @@
 
 body {
 	font-family: monospace;
-	color: cyan;
+	color: black;
 	background: white;
+}
+
+.divHead {
+	border:2px solid;
+	border-radius:25px;
+	-moz-border-radius:25px; /* Firefox 3.6 and earlier */
+}
+
+.divFoot {
+	border:1px solid;
+	border-radius:15px;
+	-moz-border-radius:15px; /* Firefox 3.6 and earlier */
 }
