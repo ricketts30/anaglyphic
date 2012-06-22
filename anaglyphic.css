@@ -6,13 +6,25 @@ body {
 	background: white;
 }
 
+.divViewport{
+	border:2px solid;
+	border-radius:25px;
+	-moz-border-radius:25px; /* Firefox 3.6 and earlier */
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
 .divHead {
+	text-align: center;
 	border:2px solid;
 	border-radius:25px;
 	-moz-border-radius:25px; /* Firefox 3.6 and earlier */
 }
 
 .divFoot {
+	text-align: center;
 	border:1px solid;
 	border-radius:15px;
 	-moz-border-radius:15px; /* Firefox 3.6 and earlier */
