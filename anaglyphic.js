@@ -56,6 +56,36 @@ var screen_half_width = 250;
 var screen_height = 300;
 var screen_width = 500;
 
+function reOrderByDistance(){
+	points.points.sort(sortByDistance);
+}
+
+// should return -1, 0, +1
+function sortByDistance(a, b){
+	var d_a = distanceFromCamera(a);
+	var d_b = distanceFromCamera(b);
+	if(d_a == d_b)
+	{
+		return 0;
+	} else if (d_a > d_b) {
+		return -1;
+	} else {
+		return 1;
+	}
+}
+
+function distanceFromCamera(a){
+	//var c_x = 0;
+	//var c_y = 0;
+	//var c_z = 180;
+	//{ "x": -20, "y": 20, "z": 20, "radius": 4 },
+	return Math.sqrt( 
+		(c_x - a.x) * (c_x - a.x) +
+		(c_y - a.y) * (c_y - a.y) +
+		(c_z - a.z) * (c_z - a.z)
+	);	
+}
+
 function dbg(msg){
 	var now = new Date();
 	$('#span_canvas2_time').html(now.toISOString());
@@ -122,8 +152,8 @@ function orthoBall(ctx, x, y, radius){
 }
 
 function ball(ctx, x, y, radius){
-	ctx.fillStyle = "rgba(255, 00, 0, 1)";
-	ctx.strokeStyle = "rgba(255, 00, 0, 1)";
+	ctx.fillStyle = "rgba(255, 0, 0, 1)";
+	ctx.strokeStyle = "rgba(255, 0, 0, 1)";
 	ctx.lineWidth = 0;
 	ctx.beginPath();
 	ctx.arc(x,y,radius,0,Math.PI*2,true);
@@ -274,7 +304,7 @@ function rotate(){
 	}
 	render();
 	render1();
-
+	reOrderByDistance();
 	setTimeout(rotate, 100);	
 }
 
