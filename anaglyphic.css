@@ -16,7 +16,7 @@ body {
 	margin-bottom: 20px;
 }
 
-h1 {
+.divH1 {
 	text-align: center;
 	border:2px solid;
 	border-radius:25px;
