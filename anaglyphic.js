@@ -56,6 +56,39 @@ var screen_half_width = 250;
 var screen_height = 300;
 var screen_width = 500;
 
+function shapeS1(){
+
+}
+
+function shapeP1(){
+
+}
+
+function shapeCubes(){
+	points = { "points": [
+		{ "x": 0, "y": 0, "z": 0, "radius": 2 },
+		
+		{ "x": 20, "y": 20, "z": 20, "radius": 4 },
+		{ "x": 20, "y": -20, "z": 20, "radius": 4 },
+		{ "x": -20, "y": 20, "z": 20, "radius": 4 },
+		{ "x": -20, "y": -20, "z": 20, "radius": 4 },
+		{ "x": 20, "y": 20, "z": -20, "radius": 4 },
+		{ "x": 20, "y": -20, "z": -20, "radius": 4 },
+		{ "x": -20, "y": 20, "z": -20, "radius": 4 },
+		{ "x": -20, "y": -20, "z": -20, "radius": 4 },
+
+		{ "x": 50, "y": 50, "z": 50, "radius": 16 },
+		{ "x": 50, "y": -50, "z": 50, "radius": 16 },
+		{ "x": -50, "y": 50, "z": 50, "radius": 16 },
+		{ "x": -50, "y": -50, "z": 50, "radius": 16 },
+		{ "x": 50, "y": 50, "z": -50, "radius": 16 },
+		{ "x": 50, "y": -50, "z": -50, "radius": 16 },
+		{ "x": -50, "y": 50, "z": -50, "radius": 16 },
+		{ "x": -50, "y": -50, "z": -50, "radius": 16 }
+	]
+};
+}
+
 function reOrderByDistance(){
 	points.points.sort(sortByDistance);
 }
